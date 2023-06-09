@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+  font-family: "comic sans MS", sans-serif;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+h2,
+h3 {
+  color: #333;
+}
+label,
+select,
+input {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  left: -5rem;
+}
+
+input[type="number"],
+select {
+  /* appearance: none; */
+  background-color: #fff;
+  border: none;
+  padding: 0 0.5rem;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border: 0.05rem solid #333;
+  outline: none;
+}
+
+input[type="number"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button:hover,
+input[type="number"]::-webkit-outer-spin-button:hover {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button:active,
+input[type="number"]::-webkit-outer-spin-button:active {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.var-input {
+  position: relative;
+}
+
+.var-input span {
+  position: absolute;
+}
+
+/* input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  opacity: 0;
+}
+input[type="number"]::-moz-inner-spin-button,
+input[type="number"]::-moz-outer-spin-button {
+  -moz-appearance: textfield;
+
+  appearance: none;
+} */
+
+/* input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+}
+input[type="number"]::-webkit-inner-spin-button:hover,
+input[type="number"]::-webkit-inner-spin-button:active {
+  box-shadow: 0 0 2px #3e3d76;
+  opacity: 0.8;
+}
+
+input[type="number"]::-moz-inner-spin-button,
+input[type="number"]::-moz-outer-spin-button {
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+input[type="number"]::-moz-inner-spin-button:hover,
+input[type="number"]::-moz-inner-spin-button:focus {
+  appearance: number-input;
+  -moz-appearance: number-input;
+  opacity: 1;
+  height: 100%;
+  cursor: pointer;
+} */
+
+/* Range */
+/* Range */
+input[type="range"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  /*  slider progress trick  */
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
+}
+
+/* Track: Mozilla Firefox */
+input[type="range"]::-moz-range-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #3e3d76;
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px #3e3d76;
+}
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #3e3d76;
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px #3e3d76;
+}
