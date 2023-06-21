@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOLVE</title>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/1.2.1/rangeslider.min.css -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <!-- <link rel="stylesheet" href="css/jquery-ui.css" /> -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- <script src="js/jquery-3.6.0.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- <script src="js/jquery-ui.js"></script> -->
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <!-- Logo -->
@@ -18,7 +29,9 @@
     <div class="container">
       <div class="sidebar">
         <div class="logo-div">
-          <a href="#"><img src="images/logo.png" alt="Logo" class="logo" /></a>
+          <a href="#"
+            ><img src="images/emblem.png" alt="Logo" class="logo"
+          /></a>
         </div>
         <ul class="tool-menu">
           <li class="tool-list">
@@ -94,7 +107,7 @@
                   d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span>Comments</span></a
+              <span>Results</span></a
             >
           </li>
         </ul>
@@ -186,7 +199,7 @@
             <h3 class="task-title">Variables</h3>
             <div class="var-div">
               <label for="materials">Materials</label>
-              <select name="materials" id="materials">
+              <select class="var-select" name="materials" id="materials">
                 <option value="steel">Steel</option>
                 <option value="steel">Aluminium</option>
                 <option value="steel">Bronze</option>
@@ -194,7 +207,7 @@
             </div>
             <div class="var-div">
               <label for="sections">Sections</label>
-              <select name="sections" id="sections">
+              <select class="var-select" name="sections" id="sections">
                 <option value="steel">I section</option>
                 <option value="steel">T section</option>
                 <option value="steel">C section</option>
@@ -205,74 +218,31 @@
               </select>
             </div>
             <div class="var-div">
-              <label for="lengthNumber">Length (mm)</label>
-              <div class="var-input">
-                <span>△</span>
-                <input type="number" id="lengthNumber" />
-                <span>▽</span>
-              </div>
-              <input
-                type="range"
-                name="length"
-                class="var-slider"
-                id="lengthRange"
-                min="1000"
-                max="3000"
-                step="10"
-              />
+              <label for="lengthSpinner">Length (mm)</label>
+              <input class="var-spinner" id="lengthSpinner" name="value" />
+              <div class="var-slider" id="lengthSlider"></div>
             </div>
             <div class="var-div">
-              <label for="dampNumber">Damping Ratio</label>
-              <input type="number" id="dampNumber" />
-              <input
-                type="range"
-                name="damp"
-                class="var-slider"
-                id="dampRange"
-                min="0"
-                max="0.99"
-                step="0.01"
-              />
+              <label for="dampSpinner">Damping Ratio</label>
+              <input class="var-spinner" id="dampSpinner" name="value" />
+              <div class="var-slider" id="dampSlider"></div>
             </div>
             <div class="var-div">
-              <label for="endMassNumber">End Mass(kg)</label>
-              <input type="number" id="endMassNumber" />
-              <input
-                type="range"
-                name="damp"
-                class="var-slider"
-                id="endMassRange"
-                min="0"
-                max="200"
-                step="0.5"
-              />
+              <label for="massSpinner">End Mass(kg)</label>
+              <input class="var-spinner" id="massSpinner" name="value" />
+              <div class="var-slider" id="massSlider"></div>
             </div>
           </div>
 
           <div id="comments" class="main__task-div">
-            <h3 class="task-title">Comments</h3>
+            <h3 class="task-title">Results</h3>
             <p>Mass of Pendulum</p>
             <p>Mass of Pendulum</p>
             <p>Mass of Pendulum</p>
             <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
-            <p>Mass of Pendulum</p>
+          </div>
+          <div class="main__task-div">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
           </div>
         </div>
       </div>
