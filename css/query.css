@@ -67,6 +67,7 @@ em:current font size
     z-index: 101;
     justify-content: space-evenly;
     border-radius: 0;
+    scroll-behavior: auto;
   }
   .tool-menu {
     list-style: none;
@@ -102,6 +103,20 @@ em:current font size
   .img-div {
     flex-direction: column;
   }
+  .title-div {
+    gap: 1rem;
+  }
+  .round {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .logo-div {
+    width: 8.3rem;
+    padding: 0.8rem 0 0.8rem 3.3rem;
+  }
+  .main__task-div:nth-child(4) {
+    margin-bottom: 6rem;
+  }
 }
 
 /* **************************** */
@@ -112,11 +127,12 @@ em:current font size
     padding: 0.5rem;
     gap: 1rem;
   }
+
   .title-div h1 {
     padding: 0.5rem;
 
     font-size: 2rem;
-    text-align: center;
+    /* text-align: center; */
   }
   .div__control {
     gap: 2rem;
