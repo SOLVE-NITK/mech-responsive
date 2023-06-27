@@ -5,22 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOLVE</title>
-    <!-- https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/1.2.1/rangeslider.min.css -->
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
-    <!-- <link rel="stylesheet" href="css/jquery-ui.css" /> -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <!-- <script src="js/jquery-3.6.0.js"></script> -->
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <!-- <script src="js/jquery-ui.js"></script> -->
+    <!-- <script defer src="https://code.jquery.com/jquery.min.js"></script> -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+    ></script>
+
     <script defer src="js/script.js"></script>
   </head>
-  <body>
+  <body onload="startsim();varinit();
+">
     <!-- Logo -->
     <!-- Experiment Title -->
     <!-- Tools Sections -->
@@ -32,7 +46,7 @@
       <span class="round right-top"></span>
       <span class="round right-bottom"></span>
       <div class="logo-div">
-        <a href="#"><img src="images/emblem.png" alt="Logo" class="logo" /></a>
+        <a href="#"><img src="images/nitk.svg" alt="Logo" class="logo" /></a>
       </div>
       <h1>Single Degree of Freedom System</h1>
     </div>
@@ -102,80 +116,43 @@
         <div class="main-section">
           <div id="simulation" class="main__task-div">
             <div id="controls" class="div__control">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="ctrl-icons"
-                id="play"
-                name="Play"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="ctrl-icons"
-                id="pause"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 5.25v13.5m-7.5-13.5v13.5"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="ctrl-icons"
-                id="refresh"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="ctrl-icons"
-                id="graph"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
-                />
-              </svg>
+              <img id="playpausebutton" onclick="simstate()" src="./images/blueplaydull.png" alt="" />
+              <img id="graphbutton" onclick="plotgraph()" src="./images/graphbutton.png" alt="" />
             </div>
             <h3 class="task-title">Simulation</h3>
             <div class="canvas__div">
               <div class="img-div">
                 <div class="circuit-dia">
                   <img src="images/massSystem.PNG" alt="mass system" />
+                  <span class="tooltip cir-tooltip"></span>
                 </div>
                 <div class="cross-img">
                   <img src="images/crossC.PNG" alt="cross section" />
+                  <span class="tooltip sec-tooltip">
+                    ISMB: 100, h: 100mm, b: 75mm, t1: 4mm, t2: 7mm, Ixx: 257.5 cm<sup>4</sup>, Iyy: 40.8 cm<sup>4</sup>,
+    Area: 14.6 cm<sup>2</sup>,
+                  </span>
+                </div>
+                <div class="other-sec display-hide">
+                  <div>
+                    <label for="CsArea">C/s Area(m^2)</label>
+                    <input class="var-spinner" id="CsArea" name="value" />
+                  </div>
+                  <div>
+                    <label for="Ivalue">Ixx(m^4) </label>
+                    <input class="var-spinner" id="Ivalue" name="value" />
+                  </div>
                 </div>
               </div>
-              <canvas id="canvas" class="canvas"></canvas>
-              <div class="graph-div"></div>
+              <div id="canvas-container">
+                <canvas id="canvas" class="canvas"></canvas>
+              </div>
+              <div class="graph-div display-hide">
+                <canvas id="graphscreen1" class="canvas"></canvas>
+              </div>
+              <div class="graph-div display-hide">
+                <canvas id="graphscreen2" class="canvas"></canvas>
+              </div>
             </div>
           </div>
           <div id="variables" class="main__task-div">
@@ -183,22 +160,32 @@
               <h3 class="task-title">Variables</h3>
               <div class="var-div">
                 <label for="materials">Materials</label>
-                <select class="var-select" name="materials" id="materials">
-                  <option value="steel">Steel</option>
-                  <option value="steel">Aluminium</option>
-                  <option value="steel">Bronze</option>
+                <select
+                  class="var-select select-menu"
+                  name="materials"
+                  id="materials"
+                >
+                  <option class="select-menu" value="0">Steel</option>
+                  <option class="select-menu" value="1">Aluminium</option>
+                  <option class="select-menu" value="2">Bronze</option>
                 </select>
               </div>
               <div class="var-div">
                 <label for="sections">Sections</label>
-                <select class="var-select" name="sections" id="sections">
-                  <option value="steel">I section</option>
-                  <option value="steel">T section</option>
-                  <option value="steel">C section</option>
-                  <option value="steel">L section</option>
-                  <option value="steel">Square section</option>
-                  <option value="steel">Circular section</option>
-                  <option value="steel">Other section</option>
+                <select
+                  class="var-select select-menu"
+                  name="sections"
+                  id="sections"
+                >
+                  <option class="select-menu" value="0">I section</option>
+                  <option class="select-menu" value="1">T section</option>
+                  <option class="select-menu" value="2">C section</option>
+                  <option class="select-menu" value="3">L section</option>
+                  <option class="select-menu" value="4">Square section</option>
+                  <option class="select-menu" value="5">
+                    Circular section
+                  </option>
+                  <option class="select-menu" value="6">Other section</option>
                 </select>
               </div>
               <div class="var-div">
@@ -222,13 +209,16 @@
           <div id="comments" class="main__task-div">
             <h3 class="task-title">Results</h3>
             <div class="settings-sections">
-              <p>Mass of Pendulum</p>
-              <p>Mass of Pendulum</p>
-              <p>Mass of Pendulum</p>
-              <p>Mass of Pendulum</p>
+              <p id="p1">m = <span id="mass"></span></p>
+            <p id="p2">k = <span id="k"></span></p>
+            <p id="p3">c = <sapn id="c"></span></p>
+            <div id="omegavalues">
+		<p>&#969;<sub>n</sub> = <span id="wn"></span></p>
+                <p>&#969;<sub>d</sub> = <span id="wd"></span></p> 
             </div>
           </div>
-          <div class="main__task-div">
+          </div>
+          <div class="main__task-div footer">
             <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
           </div>
         </div>

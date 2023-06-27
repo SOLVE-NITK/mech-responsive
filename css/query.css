@@ -17,6 +17,9 @@ em:current font size
 /* **************************** */
 
 @media (max-width: 75em) {
+  body {
+    width: 100%;
+  }
   .title-div h1 {
     font-size: 2.5rem;
   }
@@ -33,6 +36,16 @@ em:current font size
   .ctrl-icons {
     width: 3rem;
     height: 3rem;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+  }
+  .div__control img {
+    width: 3rem;
+    height: 2.8rem;
   }
 }
 
@@ -68,6 +81,15 @@ em:current font size
     justify-content: space-evenly;
     border-radius: 0;
     scroll-behavior: auto;
+    /* background: linear-gradient(
+      to bottom,
+      #f7c3a9da,
+      #c17a53da,
+      #c17a53da,
+      #c17a53da,
+      #c17a53da,
+      #311b10da
+    ); */
   }
   .tool-menu {
     list-style: none;
@@ -91,7 +113,22 @@ em:current font size
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
   }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+  }
 }
+
+/* **************************** */
+/* Below 820px (Smaller Tablets) */
+/* **************************** */
+/* @media (max-width: 48em) {
+  .main__task-div:nth-child(4) {
+    margin-bottom: 6rem;
+  }
+} */
 
 /* **************************** */
 /* Below 704px (Smaller Tablets) */
@@ -104,18 +141,32 @@ em:current font size
     flex-direction: column;
   }
   .title-div {
-    gap: 1rem;
+    gap: 0rem;
+    text-align: center;
   }
   .round {
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
   }
   .logo-div {
-    width: 8.3rem;
+    width: 8.5rem;
     padding: 0.8rem 0 0.8rem 3.3rem;
   }
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
+  }
+  .circuit-dia {
+    width: 40%;
+  }
+  .cross-img {
+    width: 60%;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
 }
 
@@ -129,9 +180,9 @@ em:current font size
   }
 
   .title-div h1 {
-    padding: 0.5rem;
+    padding: 0.2rem;
 
-    font-size: 2rem;
+    font-size: 1.6rem;
     /* text-align: center; */
   }
   .div__control {
@@ -161,6 +212,21 @@ em:current font size
   }
   .sidebar {
     border-radius: 0;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+    /* background-color: red; */
+  }
+  .div__control img {
+    width: 2.7rem;
+    height: 2.5rem;
+  }
+  .tooltip {
+    font-size: 1rem;
   }
 }
 /* 
