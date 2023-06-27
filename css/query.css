@@ -19,6 +19,7 @@ em:current font size
 @media (max-width: 75em) {
   body {
     width: 100%;
+    margin: unset;
   }
   .title-div h1 {
     font-size: 2.5rem;
@@ -99,6 +100,7 @@ em:current font size
     width: 100%;
     font-size: 2.4rem;
     justify-content: space-evenly;
+    padding: 1rem;
   }
   .main-section {
     grid-template-columns: 1fr;
@@ -119,16 +121,39 @@ em:current font size
     height: 100%;
     /* background-color: red; */
   }
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .canvas__div {
+    grid-template-columns: 1fr;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+  }
 }
 
 /* **************************** */
 /* Below 820px (Smaller Tablets) */
 /* **************************** */
-/* @media (max-width: 48em) {
-  .main__task-div:nth-child(4) {
-    margin-bottom: 6rem;
+@media (max-width: 48em) {
+  .main-section {
+    grid-template-columns: 1fr;
   }
-} */
+  .canvas__div {
+    grid-template-columns: 1fr;
+  }
+  .canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px solid rgba(177, 176, 176, 0.855);
+  }
+}
 
 /* **************************** */
 /* Below 704px (Smaller Tablets) */

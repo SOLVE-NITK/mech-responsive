@@ -130,6 +130,8 @@ const graphctx2 = graphCanvas2.getContext("2d");
 // fix scaling of canavs as per media
 let mediaQuery1 = window.matchMedia("screen and (max-width: 540px)");
 let mediaQuery2 = window.matchMedia("screen and (max-width: 704px)");
+let mediaQuery3 = window.matchMedia("screen and (max-width: 820px)");
+let mediaQuery4 = window.matchMedia("screen and (max-width: 912px)");
 let scaleX = 0.5;
 let scaleY = 0.5;
 
@@ -309,12 +311,21 @@ const setMediaQueries = function (ctx) {
   let originalX = 20;
   if (mediaQuery1.matches) {
     scaleX = 1.5;
-    originalX = 20;
-    scaleY = 0.8;
+    // originalX = 20;
+    originalX = canvas.width / 4 - 10;
+    scaleY = 0.6;
   } else if (mediaQuery2.matches) {
     scaleX = 1;
     // originalX = canvas.width / 4 - 10;
-    scaleY = 0.8;
+    scaleY = 0.6;
+  } else if (mediaQuery3.matches) {
+    scaleX = 1;
+    originalX = canvas.width / 4 - 10;
+    scaleY = 0.4;
+  } else if (mediaQuery4.matches) {
+    scaleX = 1;
+    originalX = canvas.width / 4 - 10;
+    scaleY = 0.4;
   } else {
     // originalX = canvas.width / 4 - 20;
     scaleX = 0.3;
