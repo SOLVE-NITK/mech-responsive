@@ -166,7 +166,7 @@ function simstate() {
   );
   if (imgfilename === "bluepausedull") {
     document.getElementById("playpausebutton").src =
-      "./images/blueplaydull.png";
+      "./images/blueplaydull.svg";
 
     clearInterval(simTimeId);
     simstatus = 1;
@@ -174,7 +174,7 @@ function simstate() {
   }
   if (imgfilename === "blueplaydull") {
     document.getElementById("playpausebutton").src =
-      "./images/bluepausedull.png";
+      "./images/bluepausedull.svg";
     simstatus = 0;
     clearInterval(pauseTime);
     time = 0;
