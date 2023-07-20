@@ -129,6 +129,7 @@
   border-top-right-radius: 0.5rem;
   background-color: var(--clr-title-background);
   color: var(--clr-text-clr);
+  letter-spacing: 0.15rem;
 }
 
 .main-section {
