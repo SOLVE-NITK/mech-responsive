@@ -18,12 +18,12 @@
   <sodipodi:namedview
      id="namedview3882"
      pagecolor="#ffffff"
-     bordercolor="#000000"
+     bordercolor="#5d9559"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
+     inkscape:deskcolor="#f2ffde"
      showgrid="false"
      inkscape:zoom="5.9889708"
      inkscape:cx="21.790055"
@@ -39,7 +39,7 @@
      inkscape:label="Image"
      id="g3886">
      <path
-       style="opacity:0.99;fill:#e2e8f0;stroke:none;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="opacity:0.99;fill:#f2ffde;stroke:none;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
        d="m 2.6083652,9.4829047 c -0.237484,-4.300624 2.978274,-8.02296 6.8517756,-7.9489736 L 36.464198,1.2855261 c 3.195045,0.042588 6.185117,2.2982416 6.44873,5.9617296 l 0.241829,31.2162783 c -0.0098,2.915571 -0.954721,5.102096 -3.890814,5.333812 L 8.0897857,43.680048 C 4.4530008,43.651751 2.2252944,43.119812 2.6889738,37.30431 Z"
        id="path1079"
        sodipodi:nodetypes="ccccccccc" />

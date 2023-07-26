@@ -1,4 +1,8 @@
 :root {
+  /* --clr-title-background: #2e1065;
+  --clr-text-clr: #e2e8f0;
+  --clr-container-clr: #a5b4fc; */
+
   --clr-title-background: #5d9559;
   --clr-text-clr: #f2ffde;
   --clr-container-clr: #d3fca5;
@@ -52,7 +56,7 @@ input {
 .ui-widget textarea,
 .ui-widget button,
 .ui-select option {
-  font-family: "comic sans MS", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -203,7 +207,7 @@ input {
 }
 
 .select-menu {
-  font-family: "Comic sans MS", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
 }
 .highlight {
