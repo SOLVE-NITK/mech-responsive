@@ -3,9 +3,19 @@
   --clr-text-clr: #e2e8f0;
   --clr-container-clr: #a5b4fc; */
 
-  --clr-title-background: #5d9559;
-  --clr-text-clr: #f2ffde;
-  --clr-container-clr: #d3fca5;
+  --clr-title-background: linear-gradient(
+    to right top,
+    rgba(255, 0, 0, 0.726),
+    rgb(253, 178, 178),
+    rgb(153, 135, 255)
+  );
+  --clr-text-clr: #ffffff;
+  --clr-container-clr: linear-gradient(
+    to right top,
+    rgb(153, 135, 255),
+    rgb(253, 178, 178),
+    rgba(255, 0, 0, 0.527)
+  );
 }
 *,
 *::before,

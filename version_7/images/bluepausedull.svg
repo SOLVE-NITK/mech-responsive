@@ -18,7 +18,7 @@
   <sodipodi:namedview
      id="namedview2252"
      pagecolor="#ffffff"
-     bordercolor="#5d9559;"
+     bordercolor="rgb(153, 135, 255);"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
@@ -44,12 +44,12 @@
        id="path1079"
        sodipodi:nodetypes="ccccccccc" />
     <path
-       style="opacity:0.99;fill:#5d9559;stroke:none;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       style="opacity:0.99;fill:rgb(153, 135, 255);stroke:none;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        d="m 11.771639,9.3505215 9.631368,0.059034 0.195621,26.8093914 -9.763759,0.09781 z"
        id="path2377"
        sodipodi:nodetypes="ccccc" />
     <path
-       style="opacity:0.99;fill:#5d9559;stroke:none;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       style="opacity:0.99;fill:rgb(153, 135, 255);stroke:none;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        d="m 24.877205,9.1143852 9.631368,0.059034 0.195621,26.8093918 -9.763759,0.09781 z"
        id="path2379"
        sodipodi:nodetypes="ccccc" />
