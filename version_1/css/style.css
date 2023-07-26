@@ -253,9 +253,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(247, 247, 247, 0.877);
+  background-color: rgba(247, 247, 247, 0.342);
   padding: 0.5rem;
   font-size: 1.4rem;
+  font-weight: 700;
   /* right: -10rem; */
   display: none;
 }
