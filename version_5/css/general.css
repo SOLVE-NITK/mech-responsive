@@ -1,8 +1,7 @@
 :root {
-  --clr-title-background: #17143d;
-  /* --clr-title-background: #07367d; */
+  --clr-title-background: #561131;
   --clr-text-clr: #f0f3f7;
-  --clr-container-clr: #6baafb8f;
+  --clr-container-clr: #ffe8d0;
 }
 *,
 *::before,
