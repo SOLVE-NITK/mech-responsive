@@ -1,14 +1,9 @@
 :root {
-  --clr-title-background: linear-gradient(
-    to bottom,
-    #f8c98c,
-    hsl(48, 83%, 82%),
-    #f8c98c
-  );
-  --clr-task-background: hsl(48, 69%, 87%);
+  --clr-title-background: #527a4a;
+  --clr-task-background: #ecf7ea;
   /* --clr-title-background: #07367d; */
   --clr-text-clr: #000000;
-  --clr-container-clr: #f0ffc1;
+  --clr-container-clr: #d3d6d6;
 }
 *,
 *::before,
