@@ -29,7 +29,7 @@ html {
   /* 10px */
   font-size: 62.5%;
   /* font-family: "comic sans MS", sans-serif; */
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -66,7 +66,7 @@ input {
 .ui-widget textarea,
 .ui-widget button,
 .ui-select option {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -217,7 +217,7 @@ input {
 }
 
 .select-menu {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
 .highlight {
